@@ -1,5 +1,6 @@
 import { IS_BROWSER } from "$fresh/runtime.ts";
 
+// deno-lint-ignore no-explicit-any
 export const Card = (props: any) => {
   return (
     <div
