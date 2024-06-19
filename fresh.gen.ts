@@ -4,19 +4,23 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
-import * as $api_joke from "./routes/api/joke.ts";
+import * as $api_mail_index from "./routes/api/mail/index.ts";
 import * as $index from "./routes/index.tsx";
-
+import * as $SendMailComponent from "./islands/SendMailComponent.tsx";
+import * as $SendMailForm from "./islands/SendMailForm.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
-    "./routes/api/joke.ts": $api_joke,
+    "./routes/api/mail/index.ts": $api_mail_index,
     "./routes/index.tsx": $index,
   },
-  islands: {},
+  islands: {
+    "./islands/SendMailComponent.tsx": $SendMailComponent,
+    "./islands/SendMailForm.tsx": $SendMailForm,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 
