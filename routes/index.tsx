@@ -1,18 +1,13 @@
-// deno-lint-ignore-file
 import { Card } from "../components/Card.tsx";
-import SendMail from "../islands/SendMail.tsx";
+import { SendMailComponent } from "../islands/SendMailComponent.tsx";
 
 export default function Home() {
-
- return (
+  return (
     <div
       class="
     bg-green-300 bg-gradient-to-br from-blue-100 via-green-200 to-yellow-100 px-4 py-8 mx-auto "
     >
       <div class="max-w-screen-lg min-h-screen mx-auto flex flex-col gap-y-4 ">
-        <h1 class="text-xl sm:text-4xl font-bold text-center">
-          Welcome to Hugo's Portfolio
-        </h1>
         <Card class="bg-transparent sm:bg-green-300 flex flex-col sm:flex-row gap-x-4 sm:gap-y-4">
           <div class="flex flex-auto flex-col min-w-fit items-center">
             <img
@@ -22,7 +17,6 @@ export default function Home() {
             <span class="text-lg sm:text-2xl font-semibold">Hugo Malzieux</span>
             <span class="italic">Developer Fullstack</span>
           </div>
-          {/* <div class={`border-none sm:border-2 border-green-600`}/> */}
           <div class="flex flex-initial">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
             atortor orci. Proin non leo vel orci molestie dictum. Mauris
@@ -59,7 +53,8 @@ export default function Home() {
             Suspendisse ultricies cursus ullamcorper.Integer ultricies, erat
           </div>
         </Card>
+        <SendMailComponent />
       </div>
-    </div> 
+    </div>
   );
 }

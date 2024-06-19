@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@react-email/render": "^0.0.15",
+    "browserify": "^17.0.0",
+    "dotenv": "^16.4.5"
+  },
+  "browser": {
+    "os": "os-browserify",
+    "events": false
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.5.4",
+    "eslint-plugin-react": "^7.34.3"
+  }
+}
