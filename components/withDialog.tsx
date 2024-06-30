@@ -10,6 +10,7 @@ export const withDialog = (
   WrappedComponent: FunctionComponent<DialogProps>,
   TriggerComponent: FunctionComponent<DialogProps>
 ) => {
+  // deno-lint-ignore no-explicit-any
   return (props: any) => {
     const dialogRef = useRef<HTMLDialogElement | null>(null);
     const [open, setOpen] = useState(false);
