@@ -38,5 +38,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "hugomalzieux"
-          entrypoint: "dev.ts"
+          entrypoint: "main.ts"
           root: "."
