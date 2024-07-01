@@ -50,13 +50,13 @@ export const SendMailForm: FunctionComponent<DialogProps> = ({ close }) => {
     <></>
   ) : (
     <div className="flex flex-col m-4 gap-4">
-      <h3 className="text-lg font-bold">Contact me </h3>
+      <h3 className="text-lg font-bold">Contact &#128236;</h3>
       <p className="text-sm font-medium ">
-        Send a message if you want to contact, I will be glad to have a chat
+        Leave me a message if you want to contact, I will be glad to have a chat
         with you
       </p>
       <input
-        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        className="bg-gray-50 border text-[16px] border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
         ref={mailRef}
         title="mail"
         type="mail"
@@ -64,7 +64,7 @@ export const SendMailForm: FunctionComponent<DialogProps> = ({ close }) => {
       />
 
       <textarea
-        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-[16px] rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
         ref={messageRef}
         title="message"
         placeholder="Hello, my name is John ..."
