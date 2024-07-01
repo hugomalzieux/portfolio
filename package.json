@@ -2,7 +2,8 @@
   "dependencies": {
     "@react-email/render": "^0.0.15",
     "browserify": "^17.0.0",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "mailgun.js": "^10.2.1"
   },
   "browser": {
     "os": "os-browserify",
