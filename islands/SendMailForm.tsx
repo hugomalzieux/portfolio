@@ -50,9 +50,9 @@ export const SendMailForm: FunctionComponent<DialogProps> = ({ close }) => {
     <></>
   ) : (
     <div className="flex flex-col m-4 gap-4">
-      <h3 className="text-lg font-bold">Contact me </h3>
+      <h3 className="text-lg font-bold">Contact &#128236;</h3>
       <p className="text-sm font-medium ">
-        Send a message if you want to contact, I will be glad to have a chat
+        Leave me a message if you want to contact, I will be glad to have a chat
         with you
       </p>
       <input

@@ -33,7 +33,7 @@ export const withDialog = (
           <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
             <div className="flex min-h-full  justify-center sm:p-4 text-center sm:items-center">
               <button
-                className="absolute top-2 right-2 z-10 flex items-center justify-center sm:text-white"
+                className="absolute top-4 sm:top-2 right-2 z-10 flex items-center justify-center sm:text-white"
                 onClick={closeDialog}
               >
                 <IoClose className="w-8 h-8" />

@@ -1,6 +1,6 @@
-# Fresh project
+# Hugo's portfolio
 
-Your new Fresh project is ready to go. You can follow the Fresh "Getting
+Realised with Fresh framework. You can follow the Fresh "Getting
 Started" guide here: https://fresh.deno.dev/docs/getting-started
 
 ### Usage
@@ -13,4 +13,7 @@ Then start the project:
 deno task start
 ```
 
-This will watch the project directory and restart as necessary.
+### Live demo 
+
+I used the Deno Deploy (https://deno.com/deploy) to host the project, that's so easy.
+You can check it here https://hugomalzieux.deno.dev
