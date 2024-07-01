@@ -1,28 +1,28 @@
 import { Handlers } from "$fresh/server.ts";
-import { SmtpClient } from "https://deno.land/x/smtp@v0.7.0/mod.ts";
 import "https://deno.land/x/dotenv@v3.2.2/load.ts";
-const { SMTP_USER, SMTP_PASS, SMTP_HOST } = Deno.env.toObject();
+import formData from "npm:form-data";
+import Mailgun from "mailgun.js";
+const { SMTP_USER, MAILGUN_API_KEY, MAILGUN_DOMAIN } = Deno.env.toObject();
 
 export const handler: Handlers<string | null> = {
   async POST(req, _ctx) {
-    const client = new SmtpClient();
-    await client.connectTLS({
-      hostname: SMTP_HOST,
-      port: 465,
-      username: SMTP_USER,
-      password: SMTP_PASS,
-    });
+    const mailgun = new Mailgun(formData);
 
+    const client = mailgun.client({ username: "api", key: MAILGUN_API_KEY });
     const { sender, message } = await req.json();
 
-    await client.send({
+    const messageData = {
       from: sender, // sender address
       to: SMTP_USER, // list of receivers
       subject: `[Portfolio] - New message from ${sender}`,
-      content: message,
-    });
-    await client.close();
+      text: message,
+    };
 
-    return new Response();
+    client.messages
+      .create(MAILGUN_DOMAIN, messageData)
+      .then((res) => console.log(res))
+      .catch((err) => console.error(err));
+
+    return new Response("Email sent!");
   },
 };
