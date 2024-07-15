@@ -2,39 +2,72 @@ import { Card, ExperienceComponent } from "../components/index.ts";
 import { SendMailComponent } from "../islands/SendMailComponent.tsx";
 import IoLogoGithub from "react-icons/io5/IoLogoGithub.ts";
 import IoLogoLinkedin from "react-icons/io5/IoLogoLinkedin.ts";
+import IoArrowForward from "react-icons/io5/IoArrowForward.ts";
 import IoDownloadOutline from "react-icons/io5/IoDownloadOutline.ts";
+import { FunctionalComponent } from "preact";
+
+interface ReadMoreLinkComponentProps {
+  text: string;
+  link: string;
+}
+const ReadMoreLinkComponent: FunctionalComponent<
+  ReadMoreLinkComponentProps
+> = ({ text, link }) => {
+  return (
+    <a
+      href={link}
+      class="flex gap-x-1 items-center group transition-colors text-sky-700 hover:text-sky-900"
+      target="_blank"
+    >
+      {text}
+      <IoArrowForward class="transition transform duration-200 group-hover:translate-x-2 w-4 h-4 " />
+    </a>
+  );
+};
 
 export default function Home() {
   return (
     <div
       class="
-    bg-green-300 bg-gradient-to-br from-blue-100 via-green-200 to-yellow-100 px-4 py-8 mx-auto "
+    bg-green-300 bg-gradient-to-br from-blue-100 via-green-200 to-yellow-100 px-8 py-8 mx-auto "
     >
       <div class="max-w-screen-md min-h-screen mx-auto flex flex-col sm:gap-y-4 gap-y-2 ">
-        <Card class="bg-transparent sm:bg-green-300 flex flex-col sm:flex-row gap-x-4 sm:gap-y-4 ">
+        <Card class="bg-transparent sm:bg-green-300 flex flex-col sm:flex-row gap-x-8 sm:gap-y-4 ">
           <div class="flex flex-auto flex-col min-w-fit items-center">
             <img
               class="rounded-full h-[128px] w-[128px] shadow-md"
               src="/pp.png"
             />
             <span class="text-lg sm:text-2xl font-semibold">Hugo Malzieux</span>
-            <span class="italic">Developer Fullstack</span>
+            <span class="italic">Fullstack Developer</span>
           </div>
-          <div class="flex flex-initial my-4">
-            I am a web developer, specialized in React and NestJS. I enjoy
-            working with all types of JavaScript/Typescript technologies,
-            whether frontend or backend. I'm looking forward to collaborate on
-            innovative projects, where I can bring my skills and knowledge to
-            the table.
+          <div class="flex flex-initial flex-col text-justify my-4 gap-4">
+            <p>
+              As a passionate web developer specializing in React and NestJS, I
+              thrive on crafting innovative digital solutions across the full
+              JavaScript/TypeScript stack. My expertise spans both frontend and
+              backend technologies, allowing me to create seamless, end-to-end
+              web applications. With a deep-rooted fascination for web
+              development, I constantly explore emerging frameworks and best
+              practices to stay at the cutting edge of this dynamic field.
+            </p>
+            <p>
+              Currently, I'm eager to collaborate on forward-thinking projects
+              where I can leverage my skills to drive innovation and deliver
+              impactful results. My goal is to contribute to teams that are
+              pushing the boundaries of web technology, creating solutions that
+              make a real difference in how people interact with the digital
+              world.
+            </p>
           </div>
         </Card>
         <Card class="bg-transparent sm:bg-green-300 flex flex-col gap-x-4 sm:gap-y-4 ">
           <div className="flex sm:items-end w-full flex-col sm:flex-row justify-between gap-y-2">
-            <span className="text-xl underline underline-offset-2 font-bold uppercase decoration-4">
+            <span className="text-xl w-fit font-bold uppercase relative after:absolute after:content-[''] after:left-0 after:h-1 after:bg-black after:-bottom-1 after:w-3/5">
               Experiences
             </span>
             <a
-              class="text-black w-fit text-sm hover:text-gray-500 inline-flex items-center border-0 focus:outline-none transition-colors duration-500"
+              class="w-fit text-gray-700 hover:text-gray-500 inline-flex justify-end border-0 focus:outline-none transition-colors duration-200"
               href="/Hugo_Malzieux.pdf"
               download=""
               target="_blank"
@@ -54,39 +87,104 @@ export default function Home() {
                 Frontend development of a platform for real estate agents and
                 construction agencies, designed to maximize the customer value,
                 by providing future residents the opportunity to influence the
-                design of their future home. I worked on the development of an
-                open-source Design System, build with React and Styled Component
-                library (
-                <a href="https://habx.github.io/concrete-docs" target="_blank">
-                  Concrete Lib
-                </a>
-                ).
+                design of their future home.
+                <br />
+                Unfortunatly, after 6 years the company has been in compulsory
+                liquidation, in spite of a lot users, it wasn't profitable.
+                <ReadMoreLinkComponent
+                  link="https://habx.github.io"
+                  text="Habx Github"
+                />
+              </p>
+              <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
+                I also worked on the development of an open-source Design
+                System, build with React and Styled-Component library.
+                <ReadMoreLinkComponent
+                  link="https://habx.github.io/concrete-docs"
+                  text="Habx Concrete library"
+                />
               </p>
             </ExperienceComponent>
             {/* WAYZR */}
             <ExperienceComponent
               title="Wayzr"
               date="Oct 2021 - Oct 2022"
-              position="Co-Founder & Fullstack developer"
+              position="Fullstack developer"
             >
-              <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
-                I co-founded a platform to create business collaboration between
-                Brands and Artists, which provides multiple services such as
-                collaboration contract, copywriting or publicity. I developed
-                the backend of the SaaS platform: I designed the architecture
-                with the framework NestJS, I created databases with PostgreSQL
-                and Prisma as ORM. I Set up SSO/OAuth authentications with
-                several providers (Google, Facebook...) with PassportJS. I
-                developed Frontend apps for each type of user (Brand/Artist)
-                with Nx monorepo: I Built the User Experience with ReactJS and
-                Redux. I integrated the UI designs done with Figma, by using the
-                framework Tailwind CSS. I added an Adding a direct messaging
-                feature with Web Socket (Socket.io). I also developed a NextJS
-                app for the landing page of the platform and the onboarding for
-                user, which redirect on the right React app corresponding to the
-                user type. I developed platform with React and Redux to manage
-                partnerships and commissions for E-commerce website
-                (WooCommerce, Shopify).
+              <p class="my-2">
+                I joined a friend on his entrepreneurial venture, which focused
+                on fostering collaborations between brands and artists. Our
+                business covered the entire process, from initiating
+                partnerships to monitoring each product resulting from these
+                creative alliances.
+              </p>
+              <span class="ml-2 font-semibold underline underline-offset-2 decoration-2">
+                Kolaab
+              </span>
+              <div className="ml-2 my-2 sm:ml-4 sm:my-4 text-justify">
+                I co-founded a platform designed to facilitate business
+                collaborations between Brands and Artists, offering a range of
+                services including collaboration contracts, copywriting, and
+                publicity. My primary responsibility was developing the backend
+                of this SaaS platform:
+                <ul class="list-disc ml-8">
+                  <li>I architected the system using the NestJS framework</li>
+                  <li>
+                    Implemented databases using PostgreSQL with Prisma as the
+                    ORM
+                  </li>
+                  <li>
+                    Established SSO/OAuth authentication with multiple providers
+                    (including Google and Facebook) using PassportJS
+                  </li>
+                </ul>
+                <br />
+                On the frontend, I developed separate applications for each user
+                type (Brand/Artist) within an Nx monorepo:
+                <ul class="list-disc ml-8">
+                  <li>Built the user experience using ReactJS and Redux</li>
+                  <li>
+                    Implemented UI designs from Figma using the Tailwind CSS
+                    framework
+                  </li>
+                  <li>
+                    Integrated a direct messaging feature using Web Sockets
+                    (Socket.io)
+                  </li>
+                </ul>
+                <br />
+                Additionally, I created a NextJS application for the platform's
+                landing page and user onboarding process, which redirects users
+                to the appropriate React app based on their user type.
+              </div>
+              <span class="ml-2 font-semibold underline underline-offset-2 decoration-2">
+                Slicr
+              </span>
+              <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify flex flex-col gap-2">
+                I got the chance to completely redesign the look and feel of an
+                existing platform that helps manage partnerships and commissions
+                for e-commerce sites like WooCommerce and Shopify. On top of
+                that, I added new features, especially around pricing
+                and payments. For this project, I used React and Redux, setting
+                everything up in an Nx monorepo. This allowed me to efficiently
+                build out the different experiences for the various user
+                personas, like brands and artists. The platform was already
+                using Tailwind CSS for styling, which was perfect for adding a
+                slick dark mode option alongside the default light mode. I love
+                how Tailwind makes it easy to create a cohesive, responsive UI
+                without getting bogged down in custom CSS. It was a big
+                undertaking, revamping both the visual design and core
+                functionality of the app. But it was super rewarding to take the
+                platform to the next level, with a fresh look and tons of useful
+                new features.
+                <ReadMoreLinkComponent
+                  text="Slicr : How does it work"
+                  link="https://slicr.io"
+                />
+                <ReadMoreLinkComponent
+                  text="Shopify plugin"
+                  link="https://apps.shopify.com/slicr"
+                />
               </p>
             </ExperienceComponent>
             {/* Rakuten DX */}
@@ -96,25 +194,44 @@ export default function Home() {
               position="Fullstack developer"
             >
               <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
-                I developed a no-code SaaS platform for the creation of native
-                mobile applications, intended for Designers. The backend was
-                built in NestJS, Angular for the frontend (with NgRX, RxJS) and
-                a React integration to visualize the mobile app.
+                I developed a no-code SaaS platform designed to enable Designers
+                to create native mobile applications. The backend was
+                constructed using NestJS, while the frontend utilized Angular,
+                incorporating NgRX and RxJS. Additionally, a React integration
+                was implemented to provide a visual representation of the mobile
+                app.
               </p>
             </ExperienceComponent>
             {/* HABX */}
             <ExperienceComponent
               title="Altran"
               date="Jul 2018 - Oct 2020"
-              position="Frontend Developer"
+              position="Frontend & Backend Developer"
             >
               <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
-                At Altran, I worked on several projects concerning different
-                business sectors. I worked as Frontend consultant for a web
-                application in medical analysis, we used Angular, Angular
-                Material, NgRX, RxJS I worked as Backend consultant on a
-                software, which provided feedback on experience of mechanical
-                parts for helicopters, we used Java 11 with SpringBoot
+                Here's an improved and more professional version of your text:
+                During my tenure at Altran, I contributed to diverse projects
+                across multiple business sectors, showcasing my versatility as a
+                full-stack developer. In one significant engagement, I served as
+                a Frontend Consultant for a web application in the medical
+                analysis field. This project leveraged cutting-edge technologies
+                including Angular, Angular Material, NgRX, and RxJS, allowing me
+                to create a robust and responsive user interface.
+              </p>
+              <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
+                In another key role, I acted as a Backend Consultant for a
+                sophisticated software solution in the aerospace industry. This
+                application was designed to provide critical feedback on the
+                performance and durability of mechanical parts for helicopters.
+                For this project, we utilized Java 11 in conjunction with Spring
+                Boot, enabling us to build a scalable and efficient backend
+                system. These experiences not only enhanced my technical skills
+                but also deepened my understanding of different industry
+                requirements and best practices in both frontend and backend
+                development. My ability to adapt to various technologies and
+                business domains demonstrates my versatility and commitment to
+                delivering high-quality software solutions across different
+                sectors.
               </p>
             </ExperienceComponent>
           </div>
