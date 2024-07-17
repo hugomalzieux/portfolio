@@ -84,7 +84,7 @@ export default function Home() {
               position="Frontend Developer"
             >
               <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
-                Frontend development of a platform for real estate agents and
+                I've been frontend developer on a platform for real estate agents and
                 construction agencies, designed to maximize the customer value,
                 by providing future residents the opportunity to influence the
                 design of their future home.
@@ -190,7 +190,7 @@ export default function Home() {
             {/* Rakuten DX */}
             <ExperienceComponent
               title="Rakuten DX"
-              date="Oct 2022 - Oct 2021"
+              date="Oct 2020 - Oct 2021"
               position="Fullstack developer"
             >
               <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
