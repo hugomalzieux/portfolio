@@ -84,10 +84,10 @@ export default function Home() {
               position="Frontend Developer"
             >
               <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
-                I've been frontend developer on a platform for real estate agents and
-                construction agencies, designed to maximize the customer value,
-                by providing future residents the opportunity to influence the
-                design of their future home.
+                I've been frontend developer on a platform for real estate
+                agents and construction agencies, designed to maximize the
+                customer value, by providing future residents the opportunity to
+                influence the design of their future home.
                 <br />
                 Unfortunatly, after 6 years the company has been in compulsory
                 liquidation, in spite of a lot users, it wasn't profitable.
@@ -164,8 +164,8 @@ export default function Home() {
                 I got the chance to completely redesign the look and feel of an
                 existing platform that helps manage partnerships and commissions
                 for e-commerce sites like WooCommerce and Shopify. On top of
-                that, I added new features, especially around pricing
-                and payments. For this project, I used React and Redux, setting
+                that, I added new features, especially around pricing and
+                payments. For this project, I used React and Redux, setting
                 everything up in an Nx monorepo. This allowed me to efficiently
                 build out the different experiences for the various user
                 personas, like brands and artists. The platform was already
@@ -236,7 +236,36 @@ export default function Home() {
             </ExperienceComponent>
           </div>
         </Card>
-
+        <Card class="bg-transparent sm:bg-green-300 flex flex-col gap-x-4 sm:gap-y-4 ">
+          <div className="flex sm:items-end w-full flex-col sm:flex-row justify-between gap-y-2">
+            <span className="text-xl w-fit font-bold uppercase relative after:absolute after:content-[''] after:left-0 after:h-1 after:bg-black after:-bottom-1 after:w-3/5">
+              Side projects
+            </span>
+          </div>
+          <div className="flex flex-col mx-2 divide-y-2 divide-black divide-double">
+            {/* Savoré */}
+            <ExperienceComponent title="Savoré">
+              <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
+                Savoré my digital recipe notebook that primarily focuses on food
+                recipes and cocktails. Its main purpose is to store personal
+                recipes, share them with friends, and provide a clean, ad-free
+                experience without intrusive cookie policy pop-ups.
+                <br></br>
+                Whether you're a home cook or a mixology enthusiast, Savoré offers a streamlined platform to organize, discover, and share your favorite recipes.
+              </p>
+              <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
+                The app is built using modern web technologies, including
+                TypeScript, NestJS for the backend, NextJS for server-side
+                rendering, and Tailwind CSS for styling. This tech stack ensures
+                a robust, efficient, and visually appealing user interface.
+                <ReadMoreLinkComponent
+                  text="Savoré"
+                  link="https://savore.hugomalzieux.com"
+                />
+              </p>
+            </ExperienceComponent>
+          </div>
+        </Card>
         <div className="max-w-screen-lg flex flex-col sm:flex-row items-center sm:justify-between">
           <div className="flex gap-2 items-center">
             <a href="https://github.com/hugomalzieux" target="_blank">
