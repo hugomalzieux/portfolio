@@ -16,7 +16,7 @@ const ReadMoreLinkComponent: FunctionalComponent<
   return (
     <a
       href={link}
-      class="flex gap-x-1 items-center group transition-colors text-sky-700 hover:text-sky-900"
+      class="flex gap-x-1 items-center font-semibold text-lg group transition-colors text-sky-700 hover:text-sky-900"
       target="_blank"
     >
       {text}
@@ -242,7 +242,7 @@ export default function Home() {
               Side projects
             </span>
           </div>
-          <div className="flex flex-col mx-2 divide-y-2 divide-black divide-double">
+          <div className="flex flex-col mx-2 ">
             {/* Savoré */}
             <ExperienceComponent title="Savoré">
               <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
@@ -251,7 +251,9 @@ export default function Home() {
                 recipes, share them with friends, and provide a clean, ad-free
                 experience without intrusive cookie policy pop-ups.
                 <br></br>
-                Whether you're a home cook or a mixology enthusiast, Savoré offers a streamlined platform to organize, discover, and share your favorite recipes.
+                Whether you're a home cook or a mixology enthusiast, Savoré
+                offers a streamlined platform to organize, discover, and share
+                your favorite recipes.
               </p>
               <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
                 The app is built using modern web technologies, including
@@ -261,6 +263,45 @@ export default function Home() {
                 <ReadMoreLinkComponent
                   text="Savoré"
                   link="https://savore.hugomalzieux.com"
+                />
+              </p>
+              <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 flex gap-3">
+                <a href="/savore.png" target="_blank">
+                  <img alt={"Savoré"} src={"/savore.png"} />
+                </a>
+                <a href="/savore_cocktail.png" target="_blank">
+                  <img alt={"savore_cocktail"} src={"/savore_cocktail.png"} />
+                </a>
+                <a href="/bubble_gum.png" target="_blank">
+                  <img alt={"bubble_gum"} src={"/bubble_gum.png"} />
+                </a>
+              </p>
+            </ExperienceComponent>
+            <ExperienceComponent title="Savoré - Dashboard">
+              <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
+                The Savoré web application features a sophisticated
+                administrative dashboard designed for the efficient management
+                of recipes and associated assets. Accessible exclusively by
+                administrators, this platform serves as the central hub for
+                overseeing and organizing a diverse collection of culinary
+                content.
+              </p>
+              <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
+                Built on a modern technology stack, Savoré employs TypeScript
+                for enhanced code quality, NestJS for a robust backend
+                architecture, and Remix for seamless server-side rendering,
+                ensuring optimal performance and user experience. Tailwind CSS
+                is utilized for responsive and aesthetically pleasing design,
+                allowing for rapid development and customization.
+              </p>
+              <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
+                The choice to integrate the Remix framework was motivated by a
+                desire to explore its capabilities and to conduct a comparative
+                analysis with NextJS, facilitating informed decisions for future
+                enhancements.
+                <ReadMoreLinkComponent
+                  text="Savoré Dashboard"
+                  link="https://recipes-dashboard.vercel.app/"
                 />
               </p>
             </ExperienceComponent>
