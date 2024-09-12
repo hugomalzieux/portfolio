@@ -39,7 +39,7 @@ export default function Home() {
               src="/pp.png"
             />
             <span class="text-lg sm:text-2xl font-semibold">Hugo Malzieux</span>
-            <span class="italic">Fullstack Developer</span>
+            <span class="italic">Freelance Fullstack Developer</span>
           </div>
           <div class="flex flex-initial flex-col text-justify my-4 gap-4">
             <p>
@@ -52,12 +52,11 @@ export default function Home() {
               practices to stay at the cutting edge of this dynamic field.
             </p>
             <p>
-              Currently, I'm eager to collaborate on forward-thinking projects
-              where I can leverage my skills to drive innovation and deliver
-              impactful results. My goal is to contribute to teams that are
-              pushing the boundaries of web technology, creating solutions that
-              make a real difference in how people interact with the digital
-              world.
+              I am eager to explore collaboration opportunities on innovative
+              projects that allow me to utilize my skills to achieve impactful
+              outcomes. Additionally, I am looking for freelance positions,
+              whether short-term or long-term, as a JavaScript developer. Feel
+              free to let me know if you'd like more information!
             </p>
           </div>
         </Card>
@@ -66,21 +65,33 @@ export default function Home() {
             <span className="text-xl w-fit font-bold uppercase relative after:absolute after:content-[''] after:left-0 after:h-1 after:bg-black after:-bottom-1 after:w-3/5">
               Experiences
             </span>
-            <a
-              class="w-fit text-gray-700 hover:text-gray-500 inline-flex justify-end border-0 focus:outline-none transition-colors duration-200"
+            <div
+              class="w-fit text-gray-700 inline-flex justify-end border-0 focus:outline-none transition-colors duration-200"
               href="/Hugo_Malzieux.pdf"
               download=""
               target="_blank"
             >
               <IoDownloadOutline class="w-5 h-5" />
               Download my resume
-            </a>
+              <a class={`hover:text-gray-500 ml-2`} href="/Hugo Malzieux EN.pdf" download="" target="_blank">
+                EN
+              </a>
+              <a class={`hover:text-gray-500 ml-2`} href="/Hugo Malzieux FR.pdf" download="" target="_blank">
+                FR
+              </a>
+            </div>
           </div>
+          <p>
+            From October 2023 to September 2024, I had the enriching experience
+            of living in New Zealand for a year. This opportunity allowed me to
+            significantly enhance my English language skills while immersing
+            myself in the breathtaking landscapes.
+          </p>
           <div className="flex flex-col mx-2 divide-y-2 divide-black divide-double">
             {/* HABX */}
             <ExperienceComponent
               title="Habx"
-              date="Oct 2022 - May 2023"
+              date="Oct 2022 - Sept 2023"
               position="Frontend Developer"
             >
               <p className="ml-2 mt-2 sm:ml-4 sm:mt-4 text-justify">
