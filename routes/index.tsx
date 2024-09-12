@@ -5,6 +5,8 @@ import IoLogoLinkedin from "react-icons/io5/IoLogoLinkedin.ts";
 import IoArrowForward from "react-icons/io5/IoArrowForward.ts";
 import IoDownloadOutline from "react-icons/io5/IoDownloadOutline.ts";
 import { FunctionalComponent } from "preact";
+import { i18n } from "../i18next.ts";
+import ChangeToFrench from "../islands/ChangeToFrench.tsx";
 
 interface ReadMoreLinkComponentProps {
   text: string;
@@ -26,11 +28,14 @@ const ReadMoreLinkComponent: FunctionalComponent<
 };
 
 export default function Home() {
+  // i18n.changeLanguage(urlParams.get("lang") || "en");
+
   return (
     <div
       class="
     bg-green-300 bg-gradient-to-br from-blue-100 via-green-200 to-yellow-100 px-8 py-8 mx-auto "
     >
+      <ChangeToFrench />
       <div class="max-w-screen-md min-h-screen mx-auto flex flex-col sm:gap-y-4 gap-y-2 ">
         <Card class="bg-transparent sm:bg-green-300 flex flex-col sm:flex-row gap-x-8 sm:gap-y-4 ">
           <div class="flex flex-auto flex-col min-w-fit items-center">

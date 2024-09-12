@@ -6,6 +6,7 @@ import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $api_mail_index from "./routes/api/mail/index.ts";
 import * as $index from "./routes/index.tsx";
+import * as $ChangeToFrench from "./islands/ChangeToFrench.tsx";
 import * as $SendMailComponent from "./islands/SendMailComponent.tsx";
 import * as $SendMailForm from "./islands/SendMailForm.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -18,6 +19,7 @@ const manifest = {
     "./routes/index.tsx": $index,
   },
   islands: {
+    "./islands/ChangeToFrench.tsx": $ChangeToFrench,
     "./islands/SendMailComponent.tsx": $SendMailComponent,
     "./islands/SendMailForm.tsx": $SendMailForm,
   },
