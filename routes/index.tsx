@@ -56,7 +56,7 @@ export default function Home() {
               projects that allow me to utilize my skills to achieve impactful
               outcomes. Additionally, I am looking for freelance positions,
               whether short-term or long-term, as a JavaScript developer. Feel
-              free to let me know if you'd like more information!
+              free to let me know if you'd like more information! 
             </p>
           </div>
         </Card>
